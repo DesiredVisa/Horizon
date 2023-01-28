@@ -1,0 +1,53 @@
+local QuestClose = Instance.new("ImageButton")
+local QuestClosed = false
+
+for _,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()) do
+    if v.Name == "Toggle" then
+        v:Destroy()
+    end
+end
+
+QuestClose.Name = "Toggle"
+QuestClose.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui
+QuestClose.Active = true
+QuestClose.AnchorPoint = Vector2.new(0.5, 0.5)
+QuestClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+QuestClose.BackgroundTransparency = 1.000
+QuestClose.Position = UDim2.new(0.855, 0, 0.72, 0)
+QuestClose.Selectable = true
+QuestClose.Rotation = 270
+QuestClose.Size = UDim2.new(0.020000024, 0, 0.040000024, 0)
+QuestClose.AutoButtonColor = false
+QuestClose.Image = "rbxassetid://3926305904"
+QuestClose.ImageTransparency = 0.2
+QuestClose.ImageColor3 = Color3.fromRGB(255,255,255)
+QuestClose.ImageRectSize = Vector2.new(36, 36)
+QuestClose.ImageRectOffset = Vector2.new(564, 284)
+
+QuestClose.MouseButton1Click:connect(function()
+    if QuestClosed == false then
+        QuestClosed = true
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MainQuestFrame.Visible = false
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.DailyQuestFrame.Visible = false
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.WeeklyQuestFrame.Visible = false
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.SpecialQuestFrame.Visible = false
+        local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Exponential)
+        local tween = game:GetService("TweenService"):Create(QuestClose, transitionInfo, {Rotation = 90})
+        tween:Play()
+        local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Exponential)
+        local tween = game:GetService("TweenService"):Create(QuestClose, transitionInfo, {Position = UDim2.new(0.99, 0, 0.72, 0)})
+        tween:Play()
+    elseif QuestClosed == true then
+        QuestClosed = false
+        local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Exponential)
+        local tween = game:GetService("TweenService"):Create(QuestClose, transitionInfo, {Rotation = 270})
+        tween:Play()
+        local transitionInfo = TweenInfo.new(0.5, Enum.EasingStyle.Exponential)
+        local tween = game:GetService("TweenService"):Create(QuestClose, transitionInfo, {Position = UDim2.new(0.855, 0, 0.72, 0)})
+        tween:Play()
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MainQuestFrame.Visible = true
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.DailyQuestFrame.Visible = false
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.WeeklyQuestFrame.Visible = false
+        game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.SpecialQuestFrame.Visible = false
+    end
+end)
