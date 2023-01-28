@@ -1,0 +1,108 @@
+if game.CoreGui:FindFirstChild("Andrew's CBring") then game.CoreGui:FindFirstChild("Andrew's CBring"):Destroy() end
+
+local CBring = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local Target = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local CBringButton = Instance.new("TextButton")
+
+CBring.Name = "Andrew's CBring"
+CBring.Parent = game.CoreGui
+CBring.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+CBring.ResetOnSpawn = false
+
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = CBring
+Mainframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mainframe.BackgroundTransparency = 0.1
+Mainframe.Position = UDim2.new(0.404135376, 0, 0.379141122, 0)
+Mainframe.Size = UDim2.new(0, 320, 0, 150)
+Mainframe.Active = true
+Mainframe.Draggable = true
+Mainframe.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+
+Target.Name = "Target"
+Target.Parent = Mainframe
+Target.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Target.BackgroundTransparency = 0.700
+Target.Position = UDim2.new(0.077658533, 0, 0.073766228, 0)
+Target.Size = UDim2.new(0, 268, 0, 50)
+Target.Font = Enum.Font.SourceSans
+Target.Text = ""
+Target.PlaceholderText = "Player Name"
+Target.TextColor3 = Color3.fromRGB(255, 255, 255)
+Target.TextSize = 24.000
+
+UICorner.Parent = Target
+
+CBringButton.Name = "CBringButton"
+CBringButton.Parent = Mainframe
+CBringButton.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+CBringButton.BackgroundTransparency = 0.450
+CBringButton.Position = UDim2.new(0.077658533, 0, 0.572207778, 0)
+CBringButton.Size = UDim2.new(0, 268, 0, 38)
+CBringButton.Font = Enum.Font.Cartoon
+CBringButton.Text = "C-Bring"
+CBringButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CBringButton.TextSize = 26.000
+CBringButton.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+CBringButton.TextStrokeTransparency = 0.000
+
+local function NDCBU_fake_script() -- Target.LocalScript 
+	local script = Instance.new('LocalScript', Target)
+
+	Target = script.Parent
+
+	Target.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if(string.sub(string.lower(v.Name),1,string.len(Target.Text))) == string.lower(Target.Text) then
+				Target.Text = v.Name
+			end
+		end
+	end)
+end
+coroutine.wrap(NDCBU_fake_script)()
+
+local function UUSTWKP_fake_script() -- CBringButton.LocalScript 
+	local script = Instance.new('LocalScript', CBringButton)
+
+	local button2 = script.Parent
+    local cmdp = game:GetService("Players")
+    local cmdlp = cmdp.LocalPlayer
+    local Timeout = math.huge
+    local hrp = cmdp.LocalPlayer.Character.HumanoidRootPart
+    local bringc = {}
+    cbringhuman = false
+    
+    function CBringPlayer()
+        cbringhuman = true
+        while cbringhuman and hrp do
+            task.wait()
+            local testtarget = script.Parent.Parent.Target.Text
+            repeat wait() until testtarget
+            local target = script.Parent.Parent.Target
+            target = game:GetService("Workspace")[target.text]
+            if script.Parent.Parent.Target.Text == ""..game.Players.LocalPlayer.Name.."" then return end
+            if script.Parent.Parent.Target.Text == "" then return end
+            if script.Parent.Parent.Target.Text == " " then return end
+            game.Workspace:WaitForChild(""..game.Players.LocalPlayer.Name.."", Timeout)
+            game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart", Timeout)
+            target.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
+        end
+    end
+
+    function UnCBringPlayer()
+        cbringhuman = false
+    end
+
+	button2.MouseButton1Click:Connect(function()
+        if game:GetService("CoreGui")["Andrew's CBring"].Mainframe.CBringButton.BackgroundColor3 == Color3.fromRGB(10,10,10) then
+            game:GetService("CoreGui")["Andrew's CBring"].Mainframe.CBringButton.BackgroundColor3 = Color3.fromRGB(185,65,230)
+            CBringPlayer()
+        elseif game:GetService("CoreGui")["Andrew's CBring"].Mainframe.CBringButton.BackgroundColor3 == Color3.fromRGB(185,65,230) then
+		game:GetService("CoreGui")["Andrew's CBring"].Mainframe.CBringButton.BackgroundColor3 = Color3.fromRGB(10,10,10)
+        UnCBringPlayer()
+        end
+	end)
+end
+coroutine.wrap(UUSTWKP_fake_script)()
