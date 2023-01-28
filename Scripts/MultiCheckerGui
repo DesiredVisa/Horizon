@@ -1,20 +1,8 @@
-local admins = {138362495;
-1035634591;
-
-
-}
-local player = game.Players.LocalPlayer
-if not table.find(admins,player.UserId) then
-    player:Kick("Hewwo")
-end
-
 -- Instances:
 if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.RankImgBtn then
     game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.RankImgBtn.Visible = false
 end
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("RemadeStatBox") then game.Players.LocalPlayer.PlayerGui:FindFirstChild("RemadeStatBox"):Destroy() end
-local plr = game:GetService("Players").LocalPlayer
-if plr:IsInGroup("14715181") then
 local RemadeStatBox = Instance.new("ScreenGui")
 local StatBox = Instance.new("Frame")
 local TargetBox = Instance.new("TextBox")
@@ -234,4 +222,3 @@ local function BCRB_fake_script() -- Stats.LocalScript
 	end
 end
 coroutine.wrap(BCRB_fake_script)()
-end
