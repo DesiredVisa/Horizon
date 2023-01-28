@@ -1,0 +1,237 @@
+local admins = {138362495;
+1035634591;
+
+
+}
+local player = game.Players.LocalPlayer
+if not table.find(admins,player.UserId) then
+    player:Kick("Hewwo")
+end
+
+-- Instances:
+if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.RankImgBtn then
+    game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.RankImgBtn.Visible = false
+end
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("RemadeStatBox") then game.Players.LocalPlayer.PlayerGui:FindFirstChild("RemadeStatBox"):Destroy() end
+local plr = game:GetService("Players").LocalPlayer
+if plr:IsInGroup("14715181") then
+local RemadeStatBox = Instance.new("ScreenGui")
+local StatBox = Instance.new("Frame")
+local TargetBox = Instance.new("TextBox")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local Stats = Instance.new("Frame")
+local Health = Instance.new("TextLabel")
+local UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint")
+local Fist_5 = Instance.new("TextLabel")
+local UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint")
+local Body_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint")
+local Psychic_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint")
+local Speed_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint")
+local Jump_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint")
+local DisplayBt = Instance.new("TextLabel")
+local UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint")
+local DisplayFs = Instance.new("TextLabel")
+local UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint")
+local DisplayHp = Instance.new("TextLabel")
+local UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint")
+local DisplayPsy = Instance.new("TextLabel")
+local UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint")
+local DisplayMs = Instance.new("TextLabel")
+local UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint")
+local DisplayJp = Instance.new("TextLabel")
+local UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+RemadeStatBox.Name = "RemadeStatBox"
+RemadeStatBox.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RemadeStatBox.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+RemadeStatBox.ResetOnSpawn = false
+
+StatBox.Name = "StatBox"
+StatBox.Parent = RemadeStatBox
+StatBox.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+StatBox.BorderSizePixel = 0
+StatBox.Position = UDim2.new(0, -820, 0, 700)
+StatBox.Size = UDim2.new(0.541348755, 0, 0.0304093566, 0)
+StatBox.ZIndex = 5
+
+TargetBox.Name = "TargetBox"
+TargetBox.Parent = StatBox
+TargetBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TargetBox.BorderColor3 = Color3.fromRGB(61, 61, 61)
+TargetBox.BorderSizePixel = 4
+TargetBox.Position = UDim2.new(0.781273723, 0, 0, 0)
+TargetBox.Size = UDim2.new(0.218579233, 0, 1, 0)
+TargetBox.Font = Enum.Font.GothamBlack
+TargetBox.PlaceholderColor3 = Color3.fromRGB(193, 193, 193)
+TargetBox.PlaceholderText = "Type username here"
+TargetBox.Text = ""
+TargetBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TargetBox.TextScaled = true
+TargetBox.TextSize = 20.000
+TargetBox.TextStrokeColor3 = Color3.fromRGB(61, 61, 61)
+TargetBox.TextStrokeTransparency = 0.000
+TargetBox.TextWrapped = true
+
+UITextSizeConstraint_12.Parent = TargetBox
+UITextSizeConstraint_12.MaxTextSize = 20
+
+Stats.Name = "Stats"
+Stats.Parent = StatBox
+Stats.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Stats.BackgroundTransparency = 0.450
+Stats.BorderColor3 = Color3.fromRGB(61, 61, 61)
+Stats.BorderSizePixel = 4
+Stats.Position = UDim2.new(0.781273723, 0, 1.23076928, 0)
+Stats.Size = UDim2.new(0.217486337, 0, 4.07692289, 0)
+
+Fist_5.Name = "Fist"
+Fist_5.Parent = Stats
+Fist_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fist_5.BackgroundTransparency = 1.000
+Fist_5.Position = UDim2.new(-0.025, 0, 0.081818172, 0)
+Fist_5.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+Fist_5.Font = Enum.Font.GothamBlack
+Fist_5.Text = "Fist:"
+Fist_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fist_5.TextSize = 22.000
+
+Body_2.Name = "Body"
+Body_2.Parent = Stats
+Body_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Body_2.BackgroundTransparency = 1.000
+Body_2.Position = UDim2.new(0.000099999989, 0, 0.39, 0)
+Body_2.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+Body_2.Font = Enum.Font.GothamBlack
+Body_2.Text = "Body:"
+Body_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Body_2.TextSize = 20.000
+
+Psychic_2.Name = "Psychic"
+Psychic_2.Parent = Stats
+Psychic_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Psychic_2.BackgroundTransparency = 1.000
+Psychic_2.Position = UDim2.new(0.0499999989, 0, 0.7, 0)
+Psychic_2.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+Psychic_2.Font = Enum.Font.GothamBlack
+Psychic_2.Text = "Psychic:"
+Psychic_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Psychic_2.TextSize = 20.000
+
+DisplayBt.Name = "DisplayBt"
+DisplayBt.Parent = Stats
+DisplayBt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisplayBt.BackgroundTransparency = 1.000
+DisplayBt.Position = UDim2.new(0.45, 0, 0.39)
+DisplayBt.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+DisplayBt.Font = Enum.Font.GothamBlack
+DisplayBt.Text = "1"
+DisplayBt.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayBt.TextSize = 22.500
+DisplayBt.TextXAlignment = Enum.TextXAlignment.Left
+
+DisplayFs.Name = "DisplayFs"
+DisplayFs.Parent = Stats
+DisplayFs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisplayFs.BackgroundTransparency = 1.000
+DisplayFs.Position = UDim2.new(0.45, 0, 0.081818172, 0)
+DisplayFs.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+DisplayFs.Font = Enum.Font.GothamBlack
+DisplayFs.Text = "1"
+DisplayFs.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayFs.TextSize = 22.000
+DisplayFs.TextXAlignment = Enum.TextXAlignment.Left
+
+DisplayPsy.Name = "DisplayPsy"
+DisplayPsy.Parent = Stats
+DisplayPsy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisplayPsy.BackgroundTransparency = 1.000
+DisplayPsy.Position = UDim2.new(0.45, 0, 0.7, 0)
+DisplayPsy.Size = UDim2.new(0.386934668, 0, 0.159090906, 0)
+DisplayPsy.Font = Enum.Font.GothamBlack
+DisplayPsy.Text = "1"
+DisplayPsy.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayPsy.TextSize = 22.000
+DisplayPsy.TextXAlignment = Enum.TextXAlignment.Left
+
+
+-- Scripts:
+
+local function VYRN_fake_script() -- TargetBox.LocalScript 
+	local script = Instance.new('LocalScript', TargetBox)
+
+	Target = script.Parent
+	
+	Target.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if(string.sub(string.lower(v.Name),1,string.len(Target.Text))) == string.lower(Target.Text) then
+				Target.Text = v.Name
+			end
+		end
+	end)
+end
+coroutine.wrap(VYRN_fake_script)()
+local function BCRB_fake_script() -- Stats.LocalScript 
+	local script = Instance.new('LocalScript', Stats)
+
+	--Defining Variables--
+	Target = script.Parent.Parent.TargetBox
+	
+	
+	if Target.Text == nil or Target.Text == " " or Target.Text == "" then
+		Target.Text = game:GetService("Players").LocalPlayer.Name
+	end
+	
+	
+	
+	--Defining Variables--
+
+    local multi = game:GetService("HttpService"):JSONDecode(game:GetService("Players")[Target.Text].PrivateStats.Inventory.Value)
+	
+	Fs = multi.FSMultiplier
+	Bt = multi.BTMultiplier
+	Psy = multi.PPMultiplier
+	
+    function Display()
+		DisplayFs.Text = "x"..Fs
+		DisplayBt.Text = "x"..Bt
+		DisplayPsy.Text = "x"..Psy
+	end
+	
+
+	DisplayFs = script.Parent.DisplayFs
+	DisplayBt = script.Parent.DisplayBt
+	DisplayPsy = script.Parent.DisplayPsy
+	
+	
+	Target.FocusLost:Connect(function(enterpressed)
+		if enterpressed then
+			for i,v in pairs(game.Players:GetChildren()) do
+				if(string.sub(string.lower(v.Name),1,string.len(Target.Text))) == string.lower(Target.Text) then
+					Target.Text = v.Name
+				end
+			end
+            multi = game:GetService("HttpService"):JSONDecode(game:GetService("Players")[Target.Text].PrivateStats.Inventory.Value)
+            Fs = multi.FSMultiplier
+            Bt = multi.BTMultiplier
+            Psy = multi.PPMultiplier
+            Display()
+		end
+	end)
+	
+	while true do
+		task.wait()
+            multi = game:GetService("HttpService"):JSONDecode(game:GetService("Players")[Target.Text].PrivateStats.Inventory.Value)
+            Fs = multi.FSMultiplier
+            Bt = multi.BTMultiplier
+            Psy = multi.PPMultiplier
+            Display()
+	end
+end
+coroutine.wrap(BCRB_fake_script)()
+end
