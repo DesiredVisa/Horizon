@@ -5,3 +5,8 @@ Runs the latest release of Horizon.
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DesiredVisa/Horizon/main/release", true))()
 ```
+## :newspaper: Credits
+
+- :radio_button: Some elements used from **DomainX** - https://github.com/shlexware/domainx - UI Insparation & Info
+- :radio_button: Some elements used from **Orca** - https://github.com/richie0866/orca - UI Insparation & Icons
+- :radio_button: Some elements used from **FaneX** - https://fane-x.xyz/scripts/v1/ - Buttons
