@@ -1,0 +1,101 @@
+function reload()
+
+
+end
+
+
+local Target = ""
+local test = false
+
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+    Title = "PPSpammer",
+    Style = 6,
+    SizeX = 280,
+    SizeY = 120,
+    Theme = "Dark"
+})
+
+local Main = X.New({
+    Title = "why u read this"
+})
+
+local playerr = Main.TextField({
+    Text = "Player",
+    Callback = function(Value)
+         Target = Value
+        print(Target)
+    end
+})
+
+local B = Main.Toggle({
+    Text = "Pyschic spam",
+    Callback = function(Value)
+        test = Value
+    end,
+    Enabled = false
+})
+
+while task.wait() do
+ if test then
+    if game.Players[Target] then
+        for i,v in pairs(game.Players:GetPlayers()) do
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_Start",game.Players[Target]})
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Skill_SoulAttack_End"})
+        task.wait()
+        end
+    end
+end  
+end
