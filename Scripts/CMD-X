@@ -5430,7 +5430,7 @@ function useCommand.kill()
 	workspace.CurrentCamera.CameraSubject = cmdlp.Character
 	cmdlp.Character.Humanoid.DisplayDistanceType = "None"
 	cmdlp.Character.Humanoid:UnequipTools()
-	local v = cmdlp.Backpack:FindFirstChildOfClass("Tool")
+	local v = game.Players.LocalPlayer.Backpack.Rotorcycle
 	if not v then
 		opx("*","Tool not found!")
 		return
