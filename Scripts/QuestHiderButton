@@ -1,7 +1,6 @@
 local QuestClose = Instance.new("ImageButton")
 local QuestClosed = false
 
-if game.Players.LocalPlayer.Name == "quantavio" then game.Players.LocalPlayer:Kick("gay") end
 for _,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()) do
     if v.Name == "Toggle" then
         v:Destroy()
