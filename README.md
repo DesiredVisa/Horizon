@@ -3,7 +3,7 @@
 Runs the latest release of Horizon.
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DesiredVisa/Horizon/main/release", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DesiredVisa/Horizon/main/script", true))()
 ```
 ## :newspaper: Credits
 
