@@ -86,6 +86,14 @@ game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.SpecialBtn.
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.SkilBtn.Text = "Skills"
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.SettingBtn.Text = "Settings"
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.RankImgBtn.Image = game.Players:GetUserThumbnailAsync(game.Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.PPMultiplierTxt.Position = UDim2.new(0.75, 0 , 0.671774209, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.MSMultiplierTxt.Position = UDim2.new(0.75, 0 , 0.893548429, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.PPUpgradeImgBtn.Position = UDim2.new(0.930000007, 0 , 0.674758077, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.MSUpgradeImgBtn.Position = UDim2.new(0.930000007, 0 , 0.898548424, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.Img5.Position = UDim2.new(0.0249999873, 0 , 0.663157105, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.Img3.Position = UDim2.new(0.0250000004, 0 , 0.879999995, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.MSTxt.Position = UDim2.new(0.109999999, 0 , 0.889999986, 0)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.PPTxt.Position = UDim2.new(0.109999999, 0 , 0.670000017, 0)
 
 Corner.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.MenuFrame.InfoFrame.RankImgBtn
 Corner.CornerRadius = UDim.new(1, 0)
